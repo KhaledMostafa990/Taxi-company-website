@@ -218,3 +218,5 @@ header {
 .card-btn {
   background-color: var(--main-color);
 }
+.active-card {
+}
