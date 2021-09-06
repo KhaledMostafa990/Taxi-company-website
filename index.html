@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>CABHUB</title>
   </head>
   <body>
@@ -12,19 +20,22 @@
         <div class="logo">Cab<span>HUB</span></div>
         <ul class="main-menu">
           <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
+          <!-- <li><a href="#">About</a></li> -->
+          <li><a href="#order-now">order Now</a></li>
           <li><a href="#">Features</a></li>
-          <li><a href="#">Blog</a></li>
-          <li><a href="#">order Now</a></li>
+          <!-- <li><a href="#">Blog</a></li> -->
           <li><a href="#">Contacts</a></li>
         </ul>
       </nav>
+
       <div class="landing-home-img">
         <img src="./images/Layer 3@1X.png" alt="" />
       </div>
+
       <div class="car-home-img">
         <img src="./images/Place Car Image here@1X.png" alt="" />
       </div>
+
       <div class="header-top">
         <h2>BOOK CAB NOW</h2>
         <h1>+123 4567 8900</h1>
@@ -39,6 +50,7 @@
           natus aliquid animi nostrum quis? Quibusdam non officia cum cumque ut,
           voluptatem excepturi quis accusantium sint.
         </p>
+
         <button class="header-bottom-btn btn">read more</button>
       </div>
       <!-- <form></form> -->
@@ -46,7 +58,7 @@
     <section id="order-now" class="order-now">
       <h2 class="order-now-header"><span>our</span> tariffs</h2>
       <div class="order-container">
-        <div class="card-style card-1">
+        <div class="card">
           <img src="./images/Layer 1 copy@1X.png" alt="" class="card-img" />
           <h3 class="card-header">economy class</h3>
           <p class="card-paragraph">
@@ -55,9 +67,10 @@
           </p>
           <h2 class="card-price">$1.5/MI</h2>
           <button class="card-btn btn">read more</button>
+          <i class="card-star"></i>
         </div>
 
-        <div class="card-style card-2">
+        <div class="card">
           <img src="./images/Layer 1 copy@1X.png" alt="" class="card-img" />
           <h3 class="card-header">standard class</h3>
           <p class="card-paragraph">
@@ -66,8 +79,10 @@
           </p>
           <h2 class="card-price">$1.5/MI</h2>
           <button class="card-btn btn">read more</button>
+          <i class="card-star"></i>
         </div>
-        <div class="card-style card-3">
+
+        <div class="card">
           <img src="./images/Layer 1 copy@1X.png" alt="" class="card-img" />
           <h3 class="card-header">business class</h3>
           <p class="card-paragraph">
@@ -76,8 +91,11 @@
           </p>
           <h2 class="card-price">$1.5/MI</h2>
           <button class="card-btn btn">read more</button>
+          <i class="card-star"></i>
         </div>
       </div>
     </section>
+
+    <script src="js/script.js"></script>
   </body>
 </html>
