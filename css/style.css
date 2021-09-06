@@ -156,10 +156,16 @@ header {
   color: var(--white);
 }
 
-/*** order page ***/
+/**
+*
+*
+*  order section 
+*
+*
+**/
 .order-now {
-  height: 91.5vh;
-  margin-top: 5%;
+  height: 90vh;
+  margin: 5vh 0 5vh 0;
   padding: 0 8%;
 }
 .order-now .order-container {
@@ -178,6 +184,7 @@ header {
   font-size: 4rem;
   font-weight: 800;
   text-transform: uppercase;
+  color: var(--black);
 }
 .order-now-header span {
   color: var(--main-color);
@@ -255,4 +262,69 @@ header {
 .card-btn-active {
   background-color: var(--black);
   color: var(--white);
+}
+
+/**
+*
+*
+* features section
+*
+*
+**/
+.features {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  margin: 5vh 0 5vh 0;
+  padding: 0 8%;
+  background-image: url(/images/PLace\ BG\ image@1X.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.features .features-container {
+  display: grid;
+  height: 30rem;
+  align-content: space-evenly;
+  grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  grid-gap: 4%;
+}
+.features-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+  padding-top: 4rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--white);
+  /* color: var(--black); */
+}
+.features-header span {
+  color: var(--main-color);
+  font-size: 3rem;
+  font-weight: 600;
+}
+.feat h3 {
+  color: var(--main-color);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.1rem;
+}
+.feat p {
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+.features-btn {
+  display: block;
+  width: 20%;
+  margin: 0 auto;
+  margin-top: 5rem;
 }
