@@ -31,3 +31,19 @@ cards.forEach((card, indx, arr) => {
     starIcon.classList.remove('fa-star');
   };
 });
+
+// function handleSuccess() {
+//   const data = JSON.parse(this.responseText);
+//   console.log(data);
+//   // the HTML of https://unsplash.com/
+// }
+
+// function handleError() {
+//   console.log('An error occurred \uD83D\uDE1E');
+// }
+
+// const asyncRequestObject = new XMLHttpRequest();
+// asyncRequestObject.open('GET', 'https://unsplash.com');
+// asyncRequestObject.onload = handleSuccess;
+// asyncRequestObject.onerror = handleError;
+// asyncRequestObject.send();
