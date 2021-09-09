@@ -301,12 +301,14 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   color: var(--white);
-  /* color: var(--black); */
 }
 .features-header span {
   color: var(--main-color);
   font-size: 3rem;
   font-weight: 600;
+}
+.feat {
+  position: relative;
 }
 .feat h3 {
   color: var(--main-color);
@@ -327,4 +329,108 @@ header {
   width: 20%;
   margin: 0 auto;
   margin-top: 5rem;
+}
+i:first-child {
+  color: var(--black);
+  background-color: var(--main-color);
+  border-radius: 50%;
+  box-shadow: 0 0 0 1.2rem var(--main-color);
+  position: absolute;
+  font-size: 1.6rem;
+  top: 0;
+  left: -4.5rem;
+}
+
+.download-app {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  margin: 5vh 0 5vh 0;
+  padding: 0 10%;
+}
+.download-app .download-app-container {
+  display: grid;
+  align-content: space-evenly;
+  grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+  grid-gap: 10%;
+}
+.download-img {
+  padding-left: 10rem;
+}
+.download-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-bottom: 5rem;
+  padding-top: 4rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--black);
+}
+.download-header span {
+  color: var(--main-color);
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.download-content h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.download-content .text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+.download-now {
+  display: flex;
+  justify-content: space-between;
+}
+.download-now .for-android a {
+  display: flex;
+  align-items: center;
+  width: 16rem;
+  height: 5rem;
+  justify-content: space-evenly;
+  background-color: var(--black);
+  border-radius: 5rem;
+}
+.download-now .for-android .text-dirction {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.download-now .for-android .text-dirction span {
+  font-size: 0.9rem;
+  text-transform: none;
+}
+.download-now .for-ios a {
+  display: flex;
+  align-items: center;
+  width: 16rem;
+  height: 5rem;
+  justify-content: space-evenly;
+  background-color: var(--black);
+  border-radius: 5rem;
+}
+.download-now .for-ios a img {
+  width: 4.5rem;
+}
+.download-now .for-ios .text-dirction {
+  display: flex;
+  flex-direction: column;
+  color: var(--white);
+  font-size: 1.4rem;
+  text-transform: capitalize;
+}
+.download-now .for-ios .text-dirction span {
+  font-size: 0.9rem;
+  text-transform: none;
 }
