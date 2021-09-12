@@ -9,6 +9,7 @@ Global setting
   --black: #000;
   --main-color: #f3b600;
   --gray-light: #f7f7f7;
+  --gray-dark: #c9c9c9;
 }
 
 *,
@@ -17,26 +18,27 @@ Global setting
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  outline: none;
+  border: none;
 }
 html {
   font-size: 62.5%; /* 1 rem = 10px*/
   scroll-behavior: smooth;
+
 }
 
 body {
   background-color: var(--white);
   font-size: 1.6rem;
   font-family: sans-serif;
+
 }
 ul {
   list-style: none;
 }
 a {
   text-decoration: none;
-}
-button {
-  outline: none;
-  border: none;
+  color: var(--white);
 }
 .btn {
   cursor: pointer;
@@ -58,38 +60,56 @@ Main styles
 *
 *
 **/
-header {
+.header {
   background-color: var(--main-color);
-  width: 160rem;
+  max-width: 160rem;
   height: 144rem;
-  z-index: -1;
   position: relative;
 }
-
 .main-nav {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 3.5rem;
+  width: 100%;
+  padding: 1.5rem 3.5rem;
+  z-index: 10000;
 }
+/* nav active state */
+.main-nav-active {
+  background-color: var(--gray-dark);
+  opacity: 1;
+}
+/* nav hide state */
+.hidden {
+  opacity: 0;
+
+}
+
 .main-menu {
   display: flex;
-  z-index: 3;
+  align-items: center;
 }
 .main-menu li {
-  margin-right: 2.5rem;
+  padding-right: 2.5rem;
 }
-.main-menu li a {
-  color: var(--white);
-  font-size: 1.4rem;
-  font-weight: 700;
+.main-menu li .menu-link {
+  font-size: 1.6rem;
+  font-weight: 800;
   text-transform: uppercase;
 }
+/* Active state for link */
+.active-menu {
+  color: var(--black);
+  background-color: var(--main-color);
+  padding: .5rem 2rem;
+  border-radius: 2.5rem;
+}
 .logo {
-  z-index: 3;
   color: var(--white);
   font-size: 3rem;
   font-weight: 800;
+
 }
 .logo span {
   color: var(--main-color);
@@ -100,16 +120,15 @@ header {
   width: 100%;
   height: 74rem;
   background-color: rgb(0, 0, 0, 0.2);
-  z-index: 2;
 }
 .car-home-img img {
+  z-index: 3;
   width: 82.6rem;
   height:48.4rem;
   position: absolute;
   top: 37%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3;
 }
 .header-top {
   z-index: 4;
@@ -131,39 +150,107 @@ header {
   font-size: 8rem;
   letter-spacing: 0.5rem;
 }
-.header-bottom {
+.show-case {
   color: var(--black);
   width: 55rem;
   position: absolute;
   bottom: 13%;
   left: 15%;
 }
-.header-bottom h3 {
+.show-case h3 {
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.header-bottom h2 {
+.show-case h2 {
   text-transform: uppercase;
   font-size: 4rem;
   font-weight: 800;
   margin-bottom: 4rem;
 }
-.header-bottom p {
+.show-case p {
   font-size: 2.2rem;
   font-weight: 400;
   margin-bottom: 6rem;
   line-height: 1.4;
 }
 
-.header-bottom-btn {
+.show-case-btn {
   background-color: var(--black);
   color: var(--white);
   height: 5rem;
   font-size: 1.8rem;
   font-weight: 800;
 }
+.book-cab {
+  color: var(--black);
+  background-color: var(--white);
+  width: 42rem;
+  height: 47rem;
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+.book-cab .book-heading {
+  color: var(--main-color);
+  background-color: var(--black);
+  height: 7.5rem;
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3.5rem;
+}
+.book-cab .book-heading span {
+  color: var(--white);
+}
+.book-cab-container {
+  width: 100%;
+  background-color: var(--white);
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax( 44%,1fr));
+  padding: 0 5%;
+  grid-gap: 2%;
+}
+.book-cab .form-control {
+  padding-bottom: 2rem;
+}
+.book-cab .form-control label{
+  display: block;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-bottom: 1rem;
+}
+.book-cab .form-control input{
+  display: block;
+  border: .2rem solid #f0f0f0;
+  height: .1rem;
+}
+.book-cab .form-control input:hover{
+  display: block;
+  border: .2rem solid #f0f0f0;
+  height: 3rem;
+}
+.book-cab .vehicle input{
+  width: 35.4rem;
+}
+.book-cab-btn {
+  background-color: var(--black);
+  color: var(--white);
+  display: block;
+  width: 90%;
+  height: 5rem;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
 /**
 *
 *
@@ -179,7 +266,7 @@ header {
 *
 **/
 .order-now {
-  width: 160rem;
+  max-width: 160rem;
   height: 76.8rem;
   padding-top: 3.4rem;
   padding-bottom: 3.4rem;
@@ -265,7 +352,7 @@ header {
   font-weight: 700;
   color: var(--main-color);
 }
-/*active state on hover*/
+/* Active state on hover */
 .card-price-active {
   color: var(--black);
 }
@@ -274,7 +361,7 @@ header {
   width: 17rem;
   height: 4.8rem;
 }
-/*active state on hover*/
+/* Active state on hover */
 .card-btn-active {
   background-color: var(--black);
   color: var(--white);
@@ -295,7 +382,8 @@ header {
 *
 **/
 .features {
-  width: 160rem;
+  max-width: 160rem;
+
   height: 75rem;
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -384,7 +472,8 @@ header {
 *
 **/
 .download-app {
-  width: 160rem;
+  max-width: 160rem;
+
   height: 65rem;
   padding-top:7rem;
   padding-bottom:7rem;
@@ -484,7 +573,7 @@ header {
 *
 **/
 .testimonials {
-  width: 160rem;
+  max-width: 160rem;
   height: 61rem;
   padding-top:10rem;
   padding-bottom:6rem;
@@ -577,7 +666,7 @@ header {
 **/
 
 .call-us {
-  width: 160rem;
+  max-width: 160rem;
   height: 28.5rem;
   background-color: var(--main-color);
   display: flex;
@@ -618,7 +707,8 @@ header {
 
 
 footer {
-  width: 160rem;
+  max-width: 160rem;
+
   height: 50rem;
   padding-top:6rem;
   padding-bottom:6rem;
@@ -734,3 +824,31 @@ color: var(--white);
 *
 *
 **/
+@media (max-width: 1920px){
+  .header {
+    max-width: 192rem;
+  }
+  .order-now {
+    max-width: 192rem;
+    
+  }
+  .features {
+    max-width: 192rem;
+
+  }
+  .download-app {
+    max-width: 192rem;
+
+  }
+  .testimonials {
+    max-width: 192rem;
+
+  }
+  .call-us {
+    max-width: 192rem;
+  }
+  footer {
+    max-width: 192rem;
+  }
+}
+

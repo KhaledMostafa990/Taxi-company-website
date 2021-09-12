@@ -1,49 +1,123 @@
 'use strict';
 
-/** General variables **/
+/**
+ * General variables
+**/
 
 const cards = document.querySelectorAll('.card');
-// create star
+const nav = document.querySelector('.main-nav');
+const menu = document.querySelectorAll('.main-menu li a');
 
-/** Main function **/
 
+
+/**
+ * 
+ * Helper functions
+ * 
+**/
+ const addClass = (elm, className) => {
+  elm.classList.add(className);
+  // elm.classList.add("menu__link");
+};
+const removeClass = (elm, className) => {
+  elm.classList.remove(className);
+  // elm.classList.add("menu__link");
+};
+
+
+
+/**
+ * 
+ *  Main functions 
+ * 
+**/
+// Add active state to cards
 cards.forEach((card, indx, arr) => {
   const cardPrice = card.children[3];
   const cardBtn = card.children[4];
-
   const starIcon = card.children[5];
 
-  card.onmouseover = (e) => {
-    card.classList.add('card-active');
 
-    cardPrice.classList.add('card-price-active');
-    cardBtn.classList.add('card-btn-active');
-    // Star on hover
-    starIcon.classList.add('fas');
-    starIcon.classList.add('fa-star');
+  card.onmouseover = (e) => {
+    addClass(card, 'card-active')
+    
+    addClass(cardPrice,'card-price-active')
+    addClass(cardBtn,'card-btn-active')
+
+    addClass(starIcon,'fas')
+    addClass(starIcon,'fa-star')
   };
+
   card.onmouseleave = (e) => {
-    card.classList.remove('card-active');
-    cardPrice.classList.remove('card-price-active');
-    cardBtn.classList.remove('card-btn-active');
-    // Star on hover
-    starIcon.classList.remove('fas');
-    starIcon.classList.remove('fa-star');
+    removeClass(card,'card-active');
+
+    removeClass(cardPrice,'card-price-active');
+    removeClass(cardBtn,'card-btn-active');
+
+    removeClass(starIcon,'fas');
+    removeClass(starIcon,'fa-star');
   };
 });
 
-// function handleSuccess() {
-//   const data = JSON.parse(this.responseText);
-//   console.log(data);
-//   // the HTML of https://unsplash.com/
-// }
+/** Define the viewport for every section **/
+document.addEventListener('DOMContentLoaded', ()=> {
 
-// function handleError() {
-//   console.log('An error occurred \uD83D\uDE1E');
-// }
+  // intersectionobserver method options
+  let options = {
+    root:null,
+    rootMargin: '-200px 0px',
+    threshold: 0.10,
+  }
 
-// const asyncRequestObject = new XMLHttpRequest();
-// asyncRequestObject.open('GET', 'https://unsplash.com');
-// asyncRequestObject.onload = handleSuccess;
-// asyncRequestObject.onerror = handleError;
-// asyncRequestObject.send();
+  // Using intersectionobserver method to specify the sections 
+  let interSection = new IntersectionObserver(getSectionInView, options)
+  document.querySelectorAll('section').forEach(section => {
+  interSection.observe(section);
+  // console.log('watching');
+  });
+
+});
+
+// Callback function while we defined the sections in viewport 
+const getSectionInView = (sections)=> {
+
+  sections.forEach(section => {
+
+      if (section.isIntersecting) {
+        // console.log(`#${elm.target.id}`)
+        menu.forEach(link=>{
+          // console.log(linkHref)
+          let linkHref = link.getAttribute('href');
+          let sectionId = `#${section.target.id}`;
+
+          // add active state while the link href value = section target id
+          if (sectionId !== "#header") {
+            addClass(nav, 'main-nav-active');
+          }else {
+            removeClass(nav, 'main-nav-active');
+          }
+
+          if (linkHref === sectionId) {
+            addClass(link, "active-menu");
+            
+          }else if (linkHref !== sectionId) {
+            removeClass(link, "active-menu");
+          }
+        });
+      }
+  });
+}
+
+// Hide nav on scrolling
+const hideNav = ()=>{
+  if(!nav.classList.contains('hidden')){
+    setTimeout(() => {   
+      addClass(nav, 'hidden');
+    }, 100);
+  }else {
+    setTimeout(() => {
+      removeClass(nav, 'hidden');
+    }, 900);
+  }
+}
+document.addEventListener('scroll', hideNav);

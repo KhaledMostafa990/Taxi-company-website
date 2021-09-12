@@ -15,17 +15,23 @@
     <title>CABHUB</title>
   </head>
   <body>
-    <header>
+    <!-- Start Header page -->
+    <section id="header" class="header">
+      <!-- - Nav - -->
       <nav class="main-nav">
+      <!-- - Logo - -->
         <div class="logo">Cab<span>HUB</span></div>
+      <!-- - Main menu - -->
         <ul class="main-menu">
-          <li><a href="#">Home</a></li>
-          <li><a href="#order-now">order Now</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#">Contacts</a></li>
+          <li><a class="menu-link" href="#header">home</a></li>
+          <li><a class="menu-link" href="#order-now">order Now</a></li>
+          <li><a class="menu-link" href="#features">features</a></li>
+          <li><a class="menu-link" href="#download-app">download</a></li>
+          <li><a class="menu-link" href="#testimonials">blog</a></li>
+          <li><a class="menu-link" href="#call-us">contacts</a></li>
         </ul>
       </nav>
-
+      
       <div class="landing-home-img">
         <img src="./images/Layer 3@1X.png" alt="" />
       </div>
@@ -34,15 +40,18 @@
         <h2>BOOK CAB NOW</h2>
         <h1>+123 4567 8900</h1>
       </div>
-
+      
       <div class="car-home-img">
         <img src="./images/Place Car Image here@1X.png" alt="" />
       </div>
 
+      
+      <div class="show-case">
 
-      <div class="header-bottom">
         <h3>best in city</h3>
+
         <h2>trusted cab servies in new york</h2>
+
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem,
           atque dicta, a consectetur, tempore reprehenderit vel sunt placeat
@@ -50,10 +59,55 @@
           voluptatem excepturi quis accusantium sint.
         </p>
 
-        <button class="header-bottom-btn btn">read more</button>
+        <button class="show-case-btn btn">read more</button>
       </div>
-      <!-- <form></form> -->
-    </header>
+      <!-- - Book  cab form - -->
+      <form id="book-cab" class="book-cab" action="#">
+      <h3 class="book-heading">book a <span>&nbsp;cab </span></h3>
+      <div class="book-cab-container">
+        <div class="form-control main">
+          <label for="username">Name</label>
+          <input type="text" id="username" placeholder="">
+        </div>
+
+        <div class="form-control side">
+          <label for="phone">phone</label>
+          <input type="number" id="phone" placeholder="">
+        </div>
+
+        <div class="form-control main">
+          <label for="when">when</label>
+          <input type="text" id="when" placeholder="">
+        </div>
+
+        <div class="form-control side">
+          <label for="time">time</label>
+          <input type="text" id="time" placeholder="">
+        </div>
+
+        <div class="form-control main">
+          <label for="start">start</label>
+          <input type="text" id="start" placeholder="">
+        </div>
+
+        <div class="form-control side">
+          <label for="end">end</label>
+          <input type="text" id="end" placeholder="">
+        </div>
+
+        <div class="form-control vehicle">
+          <label for="vehicle">choose vehicle</label>
+          <input type="text" id="vehicle" placeholder="">
+        </div>
+    </div>
+
+    <button class="book-cab-btn btn">submit</button>
+
+      </form>
+    </section>
+    <!--- End Header page --->
+    <!------------------------->
+    <!-- Start order section -->
     <section id="order-now" class="order-now">
       <h2 class="order-now-header"><span>our</span> tariffs</h2>
       <div class="order-container">
@@ -94,6 +148,8 @@
         </div>
       </div>
     </section>
+    <!-- End order section -->
+    <!------------------------->
     <!-- Start Features section -->
     <section id="features" class="features">
       <h2 class="features-header"><span>we do best</span>than you wish</h2>
@@ -159,9 +215,10 @@
       </div>
       <button class="features-btn btn">read more</button>
     </section>
-
     <!-- End Features section -->
-    <section class="download-app">
+    <!------------------------->
+    <!-- Start Download section -->
+    <section id="download-app" class="download-app">
       <div class="download-header"><span>download</span><div>best cab servies</div></div>
       <div class="download-app-container">
         <div class="download-content">
@@ -206,6 +263,9 @@
         />
       </div>
     </section>
+    <!-- End Features section -->
+    <!------------------------->
+    <!-- Start Download section -->
     <section id="testimonials" class="testimonials">
 
       <div class="testimonials-header"><span>happy client's</span><div>testimonials</div></div>
@@ -237,20 +297,26 @@
         
         </div>
     </section>
-    <section class="call-us">
+    <!-- End Download section -->
+    <!------------------------->
+    <!-- Start Call-us section -->
+    <section id="call-us" class="call-us">
       <div class="call-us-content">
         <h3>we are ready to take your cal 24 hours, 7days</h3>
         <h2>+123 4567 8900</h2>
       </div>
     </section>
-
-    <footer>
+    <!-- End Call-us section -->
+    <!------------------------->
+    <!-- Start Footer  -->
+    <footer id="footer">
       <div class="footer-container">
         <div class="footer-content">
 
           <h3>about cab hub</h3>
           <hr>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit,Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
           <div class="about-icon">
             <i class="fab fa-facebook"></i>
             <i class="fab fa-google"></i>
@@ -266,6 +332,7 @@
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
           <div class="download-icons">
+
             <div class="type">
               <span>android users</span><i class="fab fa-android"></i>
             </div>
@@ -299,6 +366,8 @@
       <div class="copyrghit-1"> Copyrghit &copy; 2021 Development by Khaled Farghly</div>
       <div class="copyrghit-2"> Copyrghit &copy; 2015 PSD freebies.com</div>
     </footer>
+    <!-- End Footer -->
+    <!------------------------->
     <script src="js/script.js"></script>
   </body>
 </html>
