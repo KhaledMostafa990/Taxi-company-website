@@ -473,8 +473,7 @@ Main styles
 **/
 .download-app {
   max-width: 160rem;
-
-  height: 65rem;
+  height: 74rem;
   padding-top:7rem;
   padding-bottom:7rem;
   padding-left: 12%;
@@ -574,7 +573,7 @@ Main styles
 **/
 .testimonials {
   max-width: 160rem;
-  height: 61rem;
+  height: 74rem;
   padding-top:10rem;
   padding-bottom:6rem;
   padding-left: 12%;
@@ -667,7 +666,7 @@ Main styles
 
 .call-us {
   max-width: 160rem;
-  height: 28.5rem;
+  height: 30rem;
   background-color: var(--main-color);
   display: flex;
   flex-direction: column;

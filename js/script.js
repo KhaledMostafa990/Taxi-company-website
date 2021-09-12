@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', ()=> {
   // intersectionobserver method options
   let options = {
     root:null,
-    rootMargin: '-200px 0px',
-    threshold: 0.10,
+    rootMargin: '0px 0px',
+    threshold: 0.65,
   }
 
   // Using intersectionobserver method to specify the sections 
@@ -113,11 +113,11 @@ const hideNav = ()=>{
   if(!nav.classList.contains('hidden')){
     setTimeout(() => {   
       addClass(nav, 'hidden');
-    }, 100);
+    }, 0);
   }else {
     setTimeout(() => {
       removeClass(nav, 'hidden');
-    }, 900);
+    }, 1200);
   }
 }
 document.addEventListener('scroll', hideNav);
