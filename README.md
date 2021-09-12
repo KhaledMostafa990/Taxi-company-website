@@ -2,7 +2,7 @@
 
 ## Details
 
-The Taxi Company project is a PSD design template, I challenged myself to develop it like the original design as possible using only html5/CSS/JS.
+The Taxi Company project is a PSD design template, it's a fictional taxi company that provides transportation and car rental services in New York, therefore I'm here tried to develop it like the original design with considering SEO and high performance by using HTML/CSS/JS.
 
 The complate website : https://khaledmostafa990.github.io/Taxi-company-website/
 
